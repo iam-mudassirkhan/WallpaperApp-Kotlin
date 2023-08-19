@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottum_sheet_design"
+
+    >
+
+    <RadioButton
+        android:id="@+id/setAsLockAndHomeRadioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:text="@string/set_as_lock_amp_home_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/setASLockScreenRadioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/set_as_lock_screen"
+        app:layout_constraintStart_toStartOf="@+id/setAsLockAndHomeRadioBtn"
+        app:layout_constraintTop_toBottomOf="@+id/setAsLockAndHomeRadioBtn" />
+
+    <RadioButton
+        android:id="@+id/setAsHomeScreenRadioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/set_as_home_screen"
+        app:layout_constraintStart_toStartOf="@+id/setASLockScreenRadioBtn"
+        app:layout_constraintTop_toBottomOf="@+id/setASLockScreenRadioBtn" />
+
+    <ImageView
+        android:id="@+id/close_ButtonSheet"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_bottum_sheet"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

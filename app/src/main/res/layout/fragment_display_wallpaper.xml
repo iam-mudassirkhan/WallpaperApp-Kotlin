@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DisplayWallpaperFragment">
+
+ <ImageView
+     android:id="@+id/displayWallpaperImageView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"/>
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/addToFavouriteBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="16dp"
+     android:clickable="true"
+     android:focusable="true"
+     app:backgroundTint="@color/white"
+     android:src="@drawable/addto_favourite"
+     app:layout_constraintBottom_toBottomOf="@id/setASWallpaperBtn"
+     app:layout_constraintStart_toStartOf="parent"
+
+
+     app:layout_constraintTop_toTopOf="@id/setASWallpaperBtn" />
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/removeFromFavouriteBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="16dp"
+     android:clickable="true"
+     android:focusable="true"
+     app:backgroundTint="@color/white"
+     android:src="@drawable/ic_favourite"
+     android:tint="@android:color/holo_red_light"
+     app:layout_constraintBottom_toBottomOf="@id/setASWallpaperBtn"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="@id/setASWallpaperBtn"
+     android:contentDescription="@string/romovefromfavourite" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/setASWallpaperBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="24dp"
+     android:background="@drawable/set_as_wallpaper_btn_design"
+     android:paddingHorizontal="@dimen/_30sdp"
+     android:paddingVertical="@dimen/_10sdp"
+     android:text="@string/set_as_wallpaper"
+     android:textAllCaps="false"
+     android:textColor="@color/white"
+     android:clickable="true"
+     android:textSize="@dimen/_15sdp"
+     android:layout_marginStart="@dimen/_70sdp"
+     app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+
+
+     app:layout_constraintStart_toEndOf="@id/addToFavouriteBtn"
+     android:focusable="true" />
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/downloadWallpaperBtn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     android:focusable="true"
+     app:backgroundTint="@color/white"
+     android:src="@drawable/ic_download"
+     app:layout_constraintStart_toEndOf="@id/setASWallpaperBtn"
+     app:layout_constraintTop_toTopOf="@id/setASWallpaperBtn"
+     app:layout_constraintBottom_toBottomOf="@id/setASWallpaperBtn"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:contentDescription="@string/downloadbutton" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

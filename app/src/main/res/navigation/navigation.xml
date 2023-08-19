@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.mudassir.wallpaper.Fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_wallpaperViewFragment2"
+            app:destination="@id/wallpaperViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_imageVeiwFragment"
+            app:destination="@id/imageVeiwFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_displayWallpaperFragment"
+            app:destination="@id/displayWallpaperFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cityWallpapersFragment"
+            app:destination="@id/cityWallpapersFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bookMarkedFragment"
+            app:destination="@id/bookMarkedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wallpaperViewFragment"
+        android:name="com.mudassir.wallpaper.Fragments.WallpaperViewFragment"
+        android:label="fragment_wallpaper_view"
+        tools:layout="@layout/fragment_wallpaper_view" >
+        <action
+            android:id="@+id/action_wallpaperViewFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_wallpaperViewFragment_to_animalsWallpaperFragment"
+            app:destination="@id/animalsWallpaperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalsWallpaperFragment"
+        android:name="com.mudassir.wallpaper.Fragments.AnimalsWallpaperFragment"
+        android:label="fragment_animals_wallpaper"
+        tools:layout="@layout/fragment_animals_wallpaper" >
+        <action
+            android:id="@+id/action_animalsWallpaperFragment_to_wallpaperViewFragment"
+            app:destination="@id/wallpaperViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageVeiwFragment"
+        android:name="com.mudassir.wallpaper.Fragments.ImageVeiwFragment"
+        android:label="fragment_image_veiw"
+        tools:layout="@layout/fragment_image_veiw" />
+    <fragment
+        android:id="@+id/displayWallpaperFragment"
+        android:name="com.mudassir.wallpaper.Fragments.DisplayWallpaperFragment"
+        android:label="fragment_display_wallpaper"
+        tools:layout="@layout/fragment_display_wallpaper" >
+        <action
+            android:id="@+id/action_displayWallpaperFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_displayWallpaperFragment_to_cityWallpapersFragment"
+            app:destination="@id/cityWallpapersFragment" />
+        <argument
+            android:name="userFavouriteWallpaper"
+            app:argType="com.mudassir.wallpaper.RoomDb.WallpaperEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityWallpapersFragment"
+        android:name="com.mudassir.wallpaper.Fragments.CityWallpapersFragment"
+        android:label="fragment_city_wallpapers"
+        tools:layout="@layout/fragment_city_wallpapers" >
+        <action
+            android:id="@+id/action_cityWallpapersFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarkedFragment"
+        android:name="com.mudassir.wallpaper.Fragments.BookMarkedFragment"
+        android:label="fragment_book_marked"
+        tools:layout="@layout/fragment_book_marked" >
+        <action
+            android:id="@+id/action_bookMarkedFragment_to_displayWallpaperFragment"
+            app:destination="@id/displayWallpaperFragment" />
+        <argument
+            android:name="wallpaperEntityToDisplay"
+            app:argType="com.mudassir.wallpaper.RoomDb.WallpaperEntity" />
+    </fragment>
+</navigation>
